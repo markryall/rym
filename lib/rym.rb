@@ -21,9 +21,10 @@ class Rym
   end
 
   def search_artist *args
-    @browser.goto 'http://rateyourmusic.com'
+    @browser.goto 'http://rateyourmusic.com/account/login'
     @browser.text_field(:id => 'searchfield').set args.join ' '
     @browser.button(:id => 'searchgo').click
+    Watir::Wait.until { @browser.as(:class => 'searchpage').size > 0 }
     @browser.as(:class => 'searchpage').map(&:text)
   end
 

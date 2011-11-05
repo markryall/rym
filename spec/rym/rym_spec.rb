@@ -5,7 +5,7 @@ require 'rym'
 describe Rym do
   let(:rym) { Rym.new }
 
-  #after { rym.close }
+  after { rym.close }
 
   def d *args
     Date.new *args
