@@ -1,4 +1,4 @@
 source :rubygems
 gem 'thor'
-gem 'nokogiri'
+gem 'watir-webdriver'
 gem 'rspec'

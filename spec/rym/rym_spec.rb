@@ -5,11 +5,13 @@ require 'rym'
 describe Rym do
   let(:rym) { Rym.new }
 
+  after { rym.close }
+
   it 'should search artist' do
-    rym.search_artist('sepulture').first.should == 'sepultura'
+    rym.search_artist('sepulture').first.should == 'Sepultura'
   end
 
   it 'should search artist' do
-    rym.search_artist('tmbg').should == 'They Might Be Giants'
+    rym.search_artist('tmbg').should == ['They Might Be Giants']
   end
 end
