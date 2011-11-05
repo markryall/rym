@@ -20,7 +20,6 @@ GEM
       ffi (= 1.0.9)
       json_pure
       rubyzip
-    thor (0.14.6)
     watir-webdriver (0.3.8)
       selenium-webdriver (>= 0.2.2)
 
@@ -29,5 +28,4 @@ PLATFORMS
 
 DEPENDENCIES
   rspec
-  thor
   watir-webdriver
